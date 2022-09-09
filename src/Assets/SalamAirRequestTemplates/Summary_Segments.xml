@@ -1,0 +1,12 @@
+<rad1:Segment>
+                  <rad1:PersonOrgID>-1</rad1:PersonOrgID>
+                  <rad1:FareInformationID>{{FareInformationID}}</rad1:FareInformationID>
+                  <rad1:MarketingCode i:nil="true" />
+                  <rad1:StoreFrontID i:nil="true" />
+                  <!--Optional:-->
+                  <rad1:RecordLocator i:nil="true" />
+                  <rad1:SpecialServices>{{SpecialServices}}</rad1:SpecialServices>
+                  <rad1:Seats i:nil="true" />
+                  <!--Optional:-->
+                  <rad1:CRSCode i:nil="true" />
+               </rad1:Segment>

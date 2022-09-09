@@ -1,0 +1,18 @@
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <AuthenticationSoapHeader xmlns="http://epowerv5.amadeus.com.tr/WS">
+      <WSUserName>{{WSUserName}}</WSUserName>
+      <WSPassword>{{WSPassword}}</WSPassword>
+    </AuthenticationSoapHeader>
+  </soap:Header>
+  <soap:Body>
+    <CreateTicket xmlns="http://epowerv5.amadeus.com.tr/WS">
+      <OTA_AirBookRQ>
+        <BookingReferenceID ID_Context="{{PNR}}"/>
+        <TravelerInfo>
+            {{passengers}}        
+        </TravelerInfo>
+      </OTA_AirBookRQ>
+    </CreateTicket>
+  </soap:Body>
+</soap:Envelope>

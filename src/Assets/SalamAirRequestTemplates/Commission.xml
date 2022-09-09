@@ -1,0 +1,22 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:RetrieveAgencyCommission>
+         <!--Optional:-->
+         <tem:RetrieveAgencyCommissionRequest>
+            <rad:SecurityGUID>{{TOKEN}}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>OV</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress> </rad:ClientIPAddress>
+            <!--Optional:-->
+            <rad:HistoricUserName>{{USERNAME_}}</rad:HistoricUserName>
+            <rad1:CurrencyCode>IRR</rad1:CurrencyCode>
+         </tem:RetrieveAgencyCommissionRequest>
+      </tem:RetrieveAgencyCommission>
+   </soapenv:Body>
+</soapenv:Envelope>

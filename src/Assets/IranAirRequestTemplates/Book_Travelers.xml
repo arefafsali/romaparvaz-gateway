@@ -1,0 +1,13 @@
+
+		<AirTraveler BirthDate="{{BirthDate}}" PassengerTypeCode="{{PassengerTypeCode}}" 
+		AccompaniedByInfantInd="{{AccompaniedByInfantInd}}" Gender="{{Gender}}" 
+		TravelerNationality="{{TravelerNationality}}">
+			<PersonName>
+				<NamePrefix>{{NamePrefix}}</NamePrefix>
+				<GivenName>{{GivenName}}</GivenName>
+				<Surname>{{Surname}}</Surname>
+			</PersonName>
+			<TravelerRefNumber RPH="{{TravelerRefNumber_RPH}}"/>
+			<Document DocID="{{DocID}}" DocType="{{DocType}}" DocIssueCountry="{{DocIssueCountry}}" {{PassportInfo}} />
+		</AirTraveler>
+	

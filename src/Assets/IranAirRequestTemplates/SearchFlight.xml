@@ -1,0 +1,21 @@
+<OTA_AirLowFareSearchRQ xmlns="http://www.opentravel.org/OTA/2003/05"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.opentravel.org/OTA/2003/05 
+  OTA_AirLowFareSearchRQ.xsd" EchoToken="{{MessageId}}" TimeStamp="{{TimeStamp}}"
+  Target="{{Target}}" Version="2.001" SequenceNmbr="1" PrimaryLangID="En-us">
+    <POS>
+        <Source AirlineVendorID="IR" ISOCountry="IR" ISOCurrency="IRR">
+            <RequestorID Type="5" ID="{{AgentID}}"/>
+        </Source>
+    </POS>
+    {{OriginDestinationInformation}}
+    <TravelPreferences >
+        <CabinPref Cabin="{{CabinPref}}"/>
+    </TravelPreferences>
+    <TravelerInfoSummary>
+        <AirTravelerAvail>
+            {{Passengers}}
+        </AirTravelerAvail>
+    </TravelerInfoSummary>
+    <ProcessingInfo SearchType="STANDARD"/>
+</OTA_AirLowFareSearchRQ>

@@ -1,0 +1,143 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Fulfillment.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ProcessPNRPayment>
+         <!--Optional:-->
+         <tem:PNRPaymentRequest>
+            <rad:TransactionInfo>
+               <rad1:SecurityGUID>{{SecurityGUID_FAREID}}</rad1:SecurityGUID>
+               <rad1:CarrierCodes>
+                  <!--Zero or more repetitions:-->
+                  <rad1:CarrierCode>
+                     <rad1:AccessibleCarrierCode>OV</rad1:AccessibleCarrierCode>
+                  </rad1:CarrierCode>
+               </rad1:CarrierCodes>
+               <!--Optional:-->
+               <rad1:ClientIPAddress>1.1.1.1</rad1:ClientIPAddress>
+               <!--Optional:-->
+               <rad1:HistoricUserName>{{USERNAME_}}</rad1:HistoricUserName>
+            </rad:TransactionInfo>
+            <rad:ReservationInfo>
+               <rad1:SeriesNumber>299</rad1:SeriesNumber>
+               <rad1:ConfirmationNumber>{{ConfirmationNumber}}</rad1:ConfirmationNumber>
+            </rad:ReservationInfo>
+            <rad:PNRPayments>
+               <!--Zero or more repetitions:-->
+               <rad:ProcessPNRPayment>
+                  <rad:BaseAmount>{{Amount}}</rad:BaseAmount>
+                  <rad:BaseCurrency>{{Currency}}</rad:BaseCurrency>
+                  <rad:CardHolder>test</rad:CardHolder>
+                  <rad:CardNumber>na</rad:CardNumber>
+                  <rad:CheckNumber>0</rad:CheckNumber>
+                  <rad:CurrencyPaid>{{Currency}}</rad:CurrencyPaid>
+                  <rad:CVCode>123</rad:CVCode>
+                  <rad:DatePaid>{{DatePaid}}</rad:DatePaid>
+                  <rad:DocumentReceivedBy>test</rad:DocumentReceivedBy>
+                  <rad:ExpirationDate>{{DatePaid}}</rad:ExpirationDate>
+                  <rad:ExchangeRate>1.0</rad:ExchangeRate>
+                  <rad:ExchangeRateDate>{{DatePaid}}</rad:ExchangeRateDate>
+                  <rad:FFNumber>16</rad:FFNumber>
+                  <rad:PaymentComment></rad:PaymentComment>
+                  <rad:PaymentAmount>{{Amount}}</rad:PaymentAmount>
+                  <rad:PaymentMethod>INVC</rad:PaymentMethod>
+                  <rad:Reference>test</rad:Reference>
+                  <rad:TerminalID>-2147483648</rad:TerminalID>
+                  <rad:UserData>test</rad:UserData>
+                  <rad:UserID>{{USERNAME_}}</rad:UserID>
+                  <rad:IataNumber>{{TA_NUMBER}}</rad:IataNumber>
+                  <rad:ValueCode>1</rad:ValueCode>
+                  <rad:VoucherNumber>-2147483648</rad:VoucherNumber>
+                  <rad:IsTACreditCard>false</rad:IsTACreditCard>
+                  <rad:GcxID>1</rad:GcxID>
+                  <rad:GcxOptOption>1</rad:GcxOptOption>
+                  <rad:OriginalCurrency>{{Currency}}</rad:OriginalCurrency>
+                  <rad:OriginalAmount>{{Amount}}</rad:OriginalAmount>
+                  <rad:TransactionStatus>APPROVED</rad:TransactionStatus>
+                  <rad:AuthorizationCode></rad:AuthorizationCode>
+                  <rad:PaymentReference></rad:PaymentReference>
+                  <rad:ResponseMessage></rad:ResponseMessage>
+                  <rad:CardCurrency>{{Currency}}</rad:CardCurrency>
+                  <rad:BillingCountry>840</rad:BillingCountry>
+                  <rad:FingerPrintingSessionID>1</rad:FingerPrintingSessionID>
+                  <rad:Payor>
+                     <rad2:PersonOrgID>-214</rad2:PersonOrgID>
+                     <rad2:FirstName>Mehdi</rad2:FirstName>
+                     <rad2:LastName>AbdollahiMehr</rad2:LastName>
+                     <rad2:MiddleName></rad2:MiddleName>
+                     <rad2:Age>0</rad2:Age>
+                     <rad2:DOB>1983-01-01</rad2:DOB>
+                     <rad2:Gender>Male</rad2:Gender>
+                     <rad2:Title>Mr</rad2:Title>
+                     <rad2:NationalityLaguageID>840</rad2:NationalityLaguageID>
+                     <rad2:RelationType>Self</rad2:RelationType>
+                     <rad2:WBCID>-214</rad2:WBCID>
+                     <rad2:PTCID>1</rad2:PTCID>
+                     <rad2:PTC>ADT</rad2:PTC>
+                     <rad2:TravelsWithPersonOrgID>-2147483648</rad2:TravelsWithPersonOrgID>
+                     <rad2:RedressNumber>na</rad2:RedressNumber>
+                     <rad2:KnownTravelerNumber>16</rad2:KnownTravelerNumber>
+                     <rad2:MarketingOptIn>false</rad2:MarketingOptIn>
+                     <rad2:UseInventory>true</rad2:UseInventory>
+                     <rad2:Address>
+                        <rad2:Address1>Tehran Roma Parvaz Office</rad2:Address1>
+                        <rad2:Address2 xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        <rad2:City>Tehran</rad2:City>
+                        <rad2:State>THR</rad2:State>
+                        <rad2:Postal>0</rad2:Postal>
+                        <rad2:Country>IR</rad2:Country>
+                        <rad2:CountryCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        <rad2:AreaCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        <rad2:PhoneNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                        <rad2:Display xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                     </rad2:Address>
+                     <rad2:Company>Roma</rad2:Company>
+                     <rad2:Comments>LPO1233C</rad2:Comments>
+                     <rad2:Passport>?</rad2:Passport>
+                     <rad2:Nationality>?</rad2:Nationality>
+                     <rad2:ProfileId>-2147483648</rad2:ProfileId>
+                     <rad2:IsPrimaryPassenger>true</rad2:IsPrimaryPassenger>
+                     <rad2:ContactInfos>
+                        <!--Zero or more repetitions:-->
+                        <!--Zero or more repetitions:-->
+                        <rad2:ContactInfo>
+                           <rad2:ContactID>-214</rad2:ContactID>
+                           <rad2:PersonOrgID>-1</rad2:PersonOrgID>
+                           <rad2:ContactField>mehdiam62@yahoo.com</rad2:ContactField>
+                           <rad2:ContactType>Email</rad2:ContactType>
+                           <rad2:Extension xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <rad2:CountryCode>1</rad2:CountryCode>
+                           <rad2:AreaCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <rad2:PhoneNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <rad2:Display xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                           <rad2:PreferredContactMethod>true</rad2:PreferredContactMethod>
+                        </rad2:ContactInfo>
+                     </rad2:ContactInfos>
+                     <!--Optional:-->
+                     <rad2:FrequentFlyerNumber xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                  </rad:Payor>
+                  <!--Optional:-->
+                  <rad:Result>?</rad:Result>
+                  <!--Optional:-->
+                  <rad:TransactionID>?</rad:TransactionID>
+                  <!--Optional:-->
+                  <rad:ResponseCode>?</rad:ResponseCode>
+                  <!--Optional:-->
+                  <rad:AncillaryData01>?</rad:AncillaryData01>
+                  <!--Optional:-->
+                  <rad:AncillaryData02>?</rad:AncillaryData02>
+                  <!--Optional:-->
+                  <rad:AncillaryData03>?</rad:AncillaryData03>
+                  <!--Optional:-->
+                  <rad:AncillaryData04>?</rad:AncillaryData04>
+                  <!--Optional:-->
+                  <rad:AncillaryData05>?</rad:AncillaryData05>
+               </rad:ProcessPNRPayment>
+            </rad:PNRPayments>
+            <!--Optional:-->
+            <rad:ActionType>ProcessPNRPayment</rad:ActionType>
+         </tem:PNRPaymentRequest>
+      </tem:ProcessPNRPayment>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+ 

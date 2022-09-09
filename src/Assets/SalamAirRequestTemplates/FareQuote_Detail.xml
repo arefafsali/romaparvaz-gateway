@@ -1,0 +1,30 @@
+  <rad1:FareQuoteDetail>
+                  <rad1:Origin>{{OriginCode}}</rad1:Origin>
+                  <rad1:Destination>{{DestinationCode}}</rad1:Destination>
+                  <rad1:UseAirportsNotMetroGroups>true</rad1:UseAirportsNotMetroGroups>
+                  <!--Optional:-->
+                  <rad1:UseAirportsNotMetroGroupsAsRule>false</rad1:UseAirportsNotMetroGroupsAsRule>
+                  <!--Optional:-->
+                  <rad1:UseAirportsNotMetroGroupsForFrom>false</rad1:UseAirportsNotMetroGroupsForFrom>
+                  <!--Optional:-->
+                  <rad1:UseAirportsNotMetroGroupsForTo>false</rad1:UseAirportsNotMetroGroupsForTo>
+                  <rad1:DateOfDeparture>{{DepartureDateTime}}</rad1:DateOfDeparture>
+                  <rad1:FareTypeCategory>1</rad1:FareTypeCategory>
+                  <rad1:FareClass></rad1:FareClass>
+                  <rad1:FareBasisCode></rad1:FareBasisCode>
+                  <rad1:Cabin></rad1:Cabin>
+                  <rad1:LFID>-214</rad1:LFID>
+                  <rad1:OperatingCarrierCode></rad1:OperatingCarrierCode>
+                  <rad1:MarketingCarrierCode></rad1:MarketingCarrierCode>
+                  <rad1:NumberOfDaysBefore>0</rad1:NumberOfDaysBefore>
+                  <rad1:NumberOfDaysAfter>0</rad1:NumberOfDaysAfter>
+                  <rad1:LanguageCode>EN</rad1:LanguageCode>
+                  <rad1:TicketPackageID>1</rad1:TicketPackageID>
+                  <rad1:FareQuoteRequestInfos>
+                     <!--Zero or more repetitions:-->
+                     {{ADULT_COUNT}}
+                     {{CHILD_COUNT}}
+                     {{INFANT_COUNT}}
+                  </rad1:FareQuoteRequestInfos>
+                </rad1:FareQuoteDetail>
+          

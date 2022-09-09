@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<OTA_AirLowFareSearchRQ PrimaryLangID="En-us" SequenceNmbr="1" Version="2.001" Target="Test" TimeStamp="{{TimeStamp}}" EchoToken="50987" xsi:schemaLocation="http://www.opentravel.org/OTA/2003/05 OTA_AirLowFareSearchRQ.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.opentravel.org/OTA/2003/05">
+    <POS>
+        <Source ISOCurrency="IRR" ISOCountry="IR" AirlineVendorID="IR">
+            <RequestorID ID="{{Agent_ID}}" Type="5"/>
+        </Source>
+    </POS>
+   {{OriginDestinationInformations}}
+    <TravelPreferences>
+        <CabinPref Cabin="{{Cabin}}"/>
+    </TravelPreferences>
+    <TravelerInfoSummary>
+        <AirTravelerAvail>
+             <PassengerTypeQuantity Code="ADT" Quantity="{{ADT}}"/>
+            <PassengerTypeQuantity Code="CHD" Quantity="{{CHD}}"/>
+            <PassengerTypeQuantity Code="INF" Quantity="{{INF}}"/>
+        </AirTravelerAvail>
+    </TravelerInfoSummary>
+    <ProcessingInfo SearchType="STANDARD"/>
+</OTA_AirLowFareSearchRQ>

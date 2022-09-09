@@ -1,0 +1,22 @@
+<OTA_AirBookModifyRQ xmlns="http://www.opentravel.org/OTA/2003/05" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opentravel.org/OTA/2003/05OTA_AirBookRQ.xsd" EchoToken="50987" TimeStamp="{{TimeStamp}}" Target="Test" Version="2.001" SequenceNmbr="1" PrimaryLangID="En-us">
+<POS>
+   <Source AirlineVendorID="IR" ISOCountry="IR" ISOCurrency="IRR">
+       <RequestorID Type="5" ID="{{Agent_ID}}"/>
+   </Source>
+</POS>
+<AirBookModifyRQ ModificationType="1"></AirBookModifyRQ>
+<AirReservation>
+<AirItinerary DirectionInd="{{DirectionInd}}">
+    <OriginDestinationOptions>
+       <OriginDestinationOption>
+           <FlightSegment Status="{{Status}}" FlightNumber="{{FlightNumber}}"  ResBookDesigCode="{{ResBookDesigCode}}" DepartureDateTime="{{DepartureDateTime}}" ArrivalDateTime="{{ArrivalDateTime}}"  StopQuantity="{{StopQuantity}}" RPH="{{RPH}}">
+               <DepartureAirport LocationCode="{{DepartureAirport}}"/>
+               <ArrivalAirport LocationCode="{{ArrivalAirport}}"/>
+               <OperatingAirline Code="{{OperatingAirline}}"/>
+            </FlightSegment>
+       </OriginDestinationOption>
+    </OriginDestinationOptions>
+   </AirItinerary>
+   <BookingReferenceID Status="{{Status}}" Instance="0" ID="{{BookingReferenceID}}" ID_Context="BookingRef"/>
+</AirReservation>
+</OTA_AirBookModifyRQ>

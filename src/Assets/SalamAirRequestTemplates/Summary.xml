@@ -1,0 +1,77 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:SummaryPNR>
+         <tem:SummaryPnrRequest>
+            <rad:SecurityGUID>{{SecurityGUID_FAREID}}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>OV</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <rad:ClientIPAddress></rad:ClientIPAddress>
+            <rad:HistoricUserName>{{USERNAME_}}</rad:HistoricUserName>
+            <rad1:ActionType>GetSummary</rad1:ActionType>
+            <rad1:ReservationInfo>
+               <rad:SeriesNumber>299</rad:SeriesNumber>
+               <rad:ConfirmationNumber></rad:ConfirmationNumber>
+            </rad1:ReservationInfo>
+            <rad1:SecurityToken>{{SecurityGUID_FAREID}}</rad1:SecurityToken>
+            <rad1:CarrierCurrency>{{Currency}}</rad1:CarrierCurrency>
+            <rad1:DisplayCurrency>{{Currency}}</rad1:DisplayCurrency>
+            <rad1:IATANum>{{TA_NUMBER}}</rad1:IATANum>
+            <rad1:User i:nil="true" />
+            <rad1:ReceiptLanguageID>1</rad1:ReceiptLanguageID>
+            <rad1:PromoCode i:nil="true" />
+            <rad1:ExternalBookingID i:nil="true" />
+            <rad1:Address>
+               <rad1:Address1 i:nil="true" />
+               <rad1:Address2 i:nil="true" />
+               <rad1:City i:nil="true" />
+               <rad1:State i:nil="true" />
+               <rad1:Postal i:nil="true" />
+               <rad1:Country>IRAN</rad1:Country>
+               <rad1:CountryCode>IR</rad1:CountryCode>
+               <rad1:AreaCode i:nil="true" />
+               <rad1:PhoneNumber>+982128105</rad1:PhoneNumber>
+               <rad1:Display>false</rad1:Display>
+            </rad1:Address>
+            <rad1:ContactInfos>
+               <rad1:ContactInfo>
+                  <rad1:ContactID>1</rad1:ContactID>
+                  <rad1:PersonOrgID>-1</rad1:PersonOrgID>
+                  <rad1:ContactField>{{ContactInfo_PhoneNumber}}</rad1:ContactField>
+                  <rad1:ContactType>MobilePhone</rad1:ContactType>
+                  <rad1:Extension i:nil="true" />
+                  <rad1:CountryCode i:nil="true" />
+                  <rad1:AreaCode i:nil="true" />
+                  <rad1:PhoneNumber i:nil="true" />
+                  <rad1:Display>false</rad1:Display>
+                  <rad1:PreferredContactMethod>false</rad1:PreferredContactMethod>
+               </rad1:ContactInfo>
+               <rad1:ContactInfo>
+                  <rad1:ContactID>2</rad1:ContactID>
+                  <rad1:PersonOrgID>-1</rad1:PersonOrgID>
+                  <rad1:ContactField>{{ContactInfo_Email}}</rad1:ContactField>
+                  <rad1:ContactType>Email</rad1:ContactType>
+                  <rad1:Extension i:nil="true" />
+                  <rad1:CountryCode i:nil="true" />
+                  <rad1:AreaCode i:nil="true" />
+                  <rad1:PhoneNumber i:nil="true" />
+                  <rad1:Display>false</rad1:Display>
+                  <rad1:PreferredContactMethod>true</rad1:PreferredContactMethod>
+               </rad1:ContactInfo>
+            </rad1:ContactInfos>
+            <rad1:Passengers>
+               {{Passengers}}
+            </rad1:Passengers>
+            <rad1:Segments>
+                {{Segments}}
+            </rad1:Segments>
+            <rad1:Payments i:nil="true" />
+            <rad1:Comment i:nil="true" />
+            <rad1:ReferralID i:nil="true" />
+         </tem:SummaryPnrRequest>
+      </tem:SummaryPNR>
+   </soapenv:Body>
+</soapenv:Envelope>

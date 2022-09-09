@@ -1,0 +1,7 @@
+ 
+    <OriginDestinationInformation>
+        <DepartureDateTime>{{DepartureDateTime}}</DepartureDateTime>
+        <OriginLocation LocationCode="{{OriginCode}}"/>
+        <DestinationLocation LocationCode="{{DestinationCode}}"/>
+    </OriginDestinationInformation>
+    

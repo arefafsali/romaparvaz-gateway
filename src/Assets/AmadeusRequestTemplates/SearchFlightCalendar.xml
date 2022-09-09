@@ -1,0 +1,20 @@
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <AuthenticationSoapHeader xmlns="http://epowerv5.amadeus.com.tr/WS">
+      <WSUserName>{{WSUserName}}</WSUserName>
+      <WSPassword>{{WSPassword}}</WSPassword>
+    </AuthenticationSoapHeader>
+  </soap:Header>
+  <soap:Body>
+    <SearchFlightCalendar xmlns="http://epowerv5.amadeus.com.tr/WS">
+      <OTA_AirLowFareSearchRQ ProviderType="AmadeusAndExtProviders" RefundableType="AllFlights" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="0">
+        {{OriginDestinationInformation}}
+        <TravelerInfoSummary>
+          <AirTravelerAvail>
+            {{Passengers}}
+          </AirTravelerAvail>
+        </TravelerInfoSummary>
+      </OTA_AirLowFareSearchRQ>
+    </SearchFlightCalendar>
+  </soap:Body>
+</soap:Envelope>

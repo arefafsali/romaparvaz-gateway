@@ -1,0 +1,44 @@
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <AuthenticationSoapHeader xmlns="http://epowerv5.amadeus.com.tr/WS">
+      <WSUserName>{{WSUserName}}</WSUserName>
+      <WSPassword>{{WSPassword}}</WSPassword>
+    </AuthenticationSoapHeader>
+  </soap:Header>
+  <soap:Body>
+    <SearchFlight xmlns="http://epowerv5.amadeus.com.tr/WS">
+      <OTA_AirLowFareSearchRQ ProviderType="AmadeusAndExtProviders" RefundableType="AllFlights" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="0">
+        {{OriginDestinationInformation}}
+        <TravelerInfoSummary>
+          <AirTravelerAvail>
+            {{Passengers}}
+          </AirTravelerAvail>
+        </TravelerInfoSummary>
+        {{SpecificFlightInfo}}
+        <SpecificFlightInfo>
+          <ExcludedAirline Code="PC" />
+        </SpecificFlightInfo>
+        <!-- <SpecificFlightInfo>
+               <Airline Code="TK" />
+               <Airline Code="QR" />
+               <Airline Code="LH" />
+               <Airline Code="OS" />
+               <Airline Code="FZ" />
+               <Airline Code="EK" />
+               <Airline Code="KU" />
+               <Airline Code="WY" />
+        </SpecificFlightInfo> -->
+        <TravelPreferences>
+          <CabinPref Cabin="{{CabinType}}"/>
+        </TravelPreferences>
+        <AdvanceSearchInfo>
+          <NumberOfRecommendation>1000</NumberOfRecommendation>
+          <!-- <Currency>TRY</Currency> -->
+          <!-- <ExpandedParameters>
+            <Param>NPE</Param>
+          </ExpandedParameters> -->
+        </AdvanceSearchInfo>
+      </OTA_AirLowFareSearchRQ>
+    </SearchFlight>
+  </soap:Body>
+</soap:Envelope>

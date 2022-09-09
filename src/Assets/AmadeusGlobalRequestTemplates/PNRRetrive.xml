@@ -1,0 +1,26 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://xml.amadeus.com/2010/06/Security_v1" xmlns:typ="http://xml.amadeus.com/2010/06/Types_v1" xmlns:iat="http://www.iata.org/IATA/2007/00/IATA2010.1" xmlns:app="http://xml.amadeus.com/2010/06/AppMdw_CommonTypes_v3" xmlns:link="http://wsdl.amadeus.com/2010/06/ws/Link_v1" xmlns:ses="http://xml.amadeus.com/2010/06/Session_v3">
+  <soapenv:Header xmlns:add="http://www.w3.org/2005/08/addressing">
+    <add:MessageID>{{MessageId}}</add:MessageID>
+    <add:Action>{{Action}}</add:Action>
+    <add:To>{{Endpoint}}/{{WSAP}}</add:To>
+    <awsse:Session TransactionStatusCode="InSeries" xmlns:awsse="http://xml.amadeus.com/2010/06/Session_v3">
+      <awsse:SessionId>{{SessionId}}</awsse:SessionId>
+      <awsse:SequenceNumber>{{SequenceNumber}}</awsse:SequenceNumber>
+      <awsse:SecurityToken>{{SecurityToken}}</awsse:SecurityToken>
+    </awsse:Session>
+  </soapenv:Header>
+  <soapenv:Body>
+    <PNR_Retrieve>
+      <retrievalFacts>
+        <retrieve>
+          <type>2</type>
+        </retrieve>
+        <reservationOrProfileIdentifier>
+          <reservation>
+            <controlNumber>{{PNR}}</controlNumber>
+          </reservation>
+        </reservationOrProfileIdentifier>
+      </retrievalFacts>
+    </PNR_Retrieve>
+  </soapenv:Body>
+</soapenv:Envelope>

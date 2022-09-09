@@ -1,0 +1,65 @@
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Header>
+		<AuthenticationSoapHeader xmlns="http://epowerv5.amadeus.com.tr/WS">
+			<WSUserName>{{WSUserName}}</WSUserName>
+      <WSPassword>{{WSPassword}}</WSPassword>
+		</AuthenticationSoapHeader>
+	</soap:Header>
+	<soap:Body>
+		<BookFlight xmlns="http://epowerv5.amadeus.com.tr/WS">
+			<OTA_AirBookRQ RecommendationID="{{RecommendationID}}" CombinationID="{{CombinationID}}">
+				<POS />
+				<TravelerInfo>
+					{{passengers}}
+					<!-- <AirTraveler PassengerTypeCode="ADT">
+						<PersonName>
+							<GivenName>John</GivenName>
+							<NamePrefix>MR</NamePrefix>
+							<Surname>Black</Surname>
+						</PersonName> -->
+						<!-- <BirthDate>1980-01-01</BirthDate> -->
+						<!-- <Telephone AreaCityCode="212" PhoneNumber="2122544" /> -->
+						<!-- <Email EmailType="1">johnblack@amadeus.com.tr</Email> -->
+						<!-- <Document DocType="Passport" DocID="123456" DocIssueCountry="TR" ExpireDate="2020-01-01" /> -->
+					<!-- </AirTraveler> -->
+				</TravelerInfo>
+				<Fulfillment>
+					<!-- <DeliveryAddress>
+						<AddressLine>Amadeus Rezervasyon Dağıtım Sistemleri A.Ş.</AddressLine>
+						<AddressLine>Muallim Naci Caddesi No.41 Kat 4 Ortaköy</AddressLine>
+						<CityName>Istanbul</CityName>
+						<CountryName Code="TR" />
+						<PostalCode>34345</PostalCode>
+					</DeliveryAddress> -->
+					<!-- <PaymentDetails>
+						<PaymentDetail PaymentType="CreditCard">
+							<PaymentCard CardNumber="4355084355084358" CardType="VI" SecurityNumber="000" ExpireDate="2019-12-01">
+							</PaymentCard>
+							<BillingAddress>
+								<AddressLine>Amadeus Rezervasyon Dağıtım Sistemleri A.Ş.</AddressLine>
+								<AddressLine>Muallim Naci Caddesi No.41 Kat 4 Ortaköy</AddressLine>
+								<CityName>Istanbul</CityName>
+								<CountryName Code="TR" />
+								<PostalCode>34345</PostalCode>
+							</BillingAddress>
+						</PaymentDetail>
+					</PaymentDetails> -->
+					<PaymentDetails>
+						<PaymentDetail PaymentType="None">
+							<!-- <BillingAddress>
+								<AddressLine>Amadeus Rezervasyon Dağıtım Sistemleri A.Ş.</AddressLine>
+								<AddressLine>Muallim Naci Caddesi No.41 Kat 4 Ortaköy</AddressLine>
+								<CityName>Istanbul</CityName>
+								<CountryName Code="TR" />
+								<PostalCode>34345</PostalCode>
+							</BillingAddress> -->
+						</PaymentDetail>
+					</PaymentDetails>
+					<!-- <PaymentText Name="TripName" Text="Payment text" />
+					<PaymentText Name="Notes" Text="Payment notes" /> -->
+				</Fulfillment>
+				<Ticketing TicketType="BookingOnly"/>
+			</OTA_AirBookRQ>
+		</BookFlight>
+	</soap:Body>
+</soap:Envelope>

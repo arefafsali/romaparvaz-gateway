@@ -1,0 +1,35 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sec="http://xml.amadeus.com/2010/06/Security_v1" xmlns:typ="http://xml.amadeus.com/2010/06/Types_v1" xmlns:iat="http://www.iata.org/IATA/2007/00/IATA2010.1" xmlns:app="http://xml.amadeus.com/2010/06/AppMdw_CommonTypes_v3" xmlns:link="http://wsdl.amadeus.com/2010/06/ws/Link_v1" xmlns:ses="http://xml.amadeus.com/2010/06/Session_v3" xmlns:tmr="http://xml.amadeus.com/TMRCRQ_11_1_1A">
+  <soapenv:Header xmlns:add="http://www.w3.org/2005/08/addressing">
+    <add:MessageID>{{MessageId}}</add:MessageID>
+    <add:Action>{{Action}}</add:Action>
+    <add:To>{{Endpoint}}/{{WSAP}}</add:To>
+    <awsse:Session TransactionStatusCode="InSeries" xmlns:awsse="http://xml.amadeus.com/2010/06/Session_v3">
+      <awsse:SessionId>{{SessionId}}</awsse:SessionId>
+      <awsse:SequenceNumber>{{SequenceNumber}}</awsse:SequenceNumber>
+      <awsse:SecurityToken>{{SecurityToken}}</awsse:SecurityToken>
+    </awsse:Session>
+  </soapenv:Header>
+  <soapenv:Body>
+    <Fare_CheckRules>
+      <msgType>
+        <messageFunctionDetails>
+          <messageFunction>712</messageFunction>
+        </messageFunctionDetails>
+      </msgType>
+      <itemNumber>
+        <itemNumberDetails>
+          <number>{{fareIndex}}</number>
+        </itemNumberDetails>
+        <itemNumberDetails>
+          <number>{{flightIndex}}</number>
+          <type>FC</type>
+        </itemNumberDetails>
+      </itemNumber>
+      <fareRule>
+        <tarifFareRule>
+          <ruleSectionId>700</ruleSectionId>
+        </tarifFareRule>
+      </fareRule>
+    </Fare_CheckRules>
+  </soapenv:Body>
+</soapenv:Envelope>

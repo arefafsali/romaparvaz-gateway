@@ -1,0 +1,23 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareBundleDetails">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:RetrieveFareBundleDetails>
+         <!--Optional:-->
+         <tem:RetrieveFareBundleRequest>
+            <rad:SecurityGUID>{{SecurityGUID_FAREID}}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>OV</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress></rad:ClientIPAddress>
+            <!--Optional:-->
+            <rad:HistoricUserName>{{USERNAME_}}</rad:HistoricUserName>
+            <!--Optional:-->
+            <rad1:BundleCode>{{BUNDLE}}</rad1:BundleCode>
+         </tem:RetrieveFareBundleRequest>
+      </tem:RetrieveFareBundleDetails>
+   </soapenv:Body>
+</soapenv:Envelope>

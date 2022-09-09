@@ -1,0 +1,12 @@
+<rad1:SpecialService>
+    <rad1:CodeType>{{CodeType}}</rad1:CodeType>
+    <rad1:ServiceID>{{ServiceID}}</rad1:ServiceID>
+    <rad1:SSRCategory>{{SSRCategory}}</rad1:SSRCategory>
+    <rad1:LogicalFlightID>{{LogicalFlightID}}</rad1:LogicalFlightID>
+    <rad1:DepartureDate>{{DepartureDate}}</rad1:DepartureDate>
+    <rad1:Amount>0</rad1:Amount>
+    <rad1:OverrideAmount>false</rad1:OverrideAmount>
+    <rad1:CurrencyCode>{{Currency}}</rad1:CurrencyCode>
+    <rad1:ChargeComment>Loggage</rad1:ChargeComment>
+    <rad1:PersonOrgID>-1</rad1:PersonOrgID>
+</rad1:SpecialService>

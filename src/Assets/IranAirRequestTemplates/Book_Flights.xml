@@ -1,0 +1,9 @@
+ 
+            <OriginDestinationOption>
+                <FlightSegment FlightNumber="{{FlightNumber}}" ResBookDesigCode="{{ResBookDesigCode}}" DepartureDateTime="{{DepartureDateTime}}" ArrivalDateTime="{{ArrivalDateTime}}" Duration="{{Duration}}" StopQuantity="{{StopQuantity}}" RPH="{{RPH}}">
+                    <DepartureAirport LocationCode="{{DepartureAirport}}"/>
+                    <ArrivalAirport LocationCode="{{ArrivalAirport}}"/>
+                    <OperatingAirline Code="{{OperatingAirline}}"/>
+                </FlightSegment>
+            </OriginDestinationOption>
+        

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.isaaviation.com/thinair/webservices/OTA/Extensions/2003/05">
+  <soap:Header>
+    <wsse:Security soap:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <wsse:UsernameToken>
+        <wsse:Username>{{Username}}</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">{{Password}}</wsse:Password>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </soap:Header>
+  <soap:Body xmlns:ns2="http://www.opentravel.org/OTA/2003/05">
+    <ns2:OTA_AirBookRQ TransactionIdentifier="{{TransactionID}}">
+      <ns2:POS>
+        <ns2:Source TerminalID="{{TerminalID}}">
+          <ns2:RequestorID ID="{{Username}}" Type="{{UniqueIDType}}" />
+          <ns2:BookingChannel Type="{{BookingChannelType}}" />
+        </ns2:Source>
+      </ns2:POS>
+      <ns2:AirItinerary>
+        <ns2:OriginDestinationOptions>
+          {{OriginDestinationOption}}
+        </ns2:OriginDestinationOptions>
+      </ns2:AirItinerary>
+      <ns2:TravelerInfo>
+        {{passengers}}
+        <!-- <ns2:CustLoyalty ShareSynchInd="?" ShareMarketInd="?" ProgramID="?" MembershipID="?" TravelSector="?" LoyalLevel="?" SingleVendorInd="?" SignupDate="?" EffectiveDate="?" ExpireDate="?" RPH="?" VendorCode="?" Operation="?" /> -->
+        <!-- <ns2:Document ShareSynchInd="?" ShareMarketInd="?" DocIssueAuthority="?" DocIssueLocation="?" DocID="?" DocType="?" Gender="?" BirthDate="?" EffectiveDate="?" ExpireDate="?" DocIssueStateProv="?" DocIssueCountry="?" BirthCountry="?" DocHolderNationality="?" Operation="?" /> -->
+      </ns2:TravelerInfo>
+      <ns2:Fulfillment>
+        <ns2:PaymentDetails>
+          <ns2:PaymentDetail>
+            <ns2:DirectBill>
+              <ns2:CompanyName Code="{{OfficeID}}" />
+            </ns2:DirectBill>
+            <!-- <ns2:Voucher EffectiveDate="?" ExpireDate="?" SeriesCode="?" /> -->
+            <!-- <ns2:LoyaltyRedemption CertificateNumber="?" MemberNumber="?" ProgramName="?" PromotionCode="?" PromotionVendorCode="?" RedemptionQuantity="?" /> -->
+            <!-- <ns2:MiscChargeOrder TicketNumber="?" /> -->
+            <!-- <ns2:Cash CashIndicator="true" /> -->
+            <!--Optional:-->
+            <ns2:PaymentAmount Amount="{{TotalPrice}}" CurrencyCode="IRR" DecimalPlaces="2" />
+          </ns2:PaymentDetail>
+        </ns2:PaymentDetails>
+      </ns2:Fulfillment>
+    </ns2:OTA_AirBookRQ>
+    <ns1:AAAirBookRQExt>
+      <ns1:ContactInfo>
+      {{IssuerContactInfo}}
+      </ns1:ContactInfo>
+      <ns1:TravelerAdditionalInfo>
+        {{TravelerAdditionalInfo}}
+      </ns1:TravelerAdditionalInfo>
+    </ns1:AAAirBookRQExt>
+  </soap:Body>
+</soap:Envelope>

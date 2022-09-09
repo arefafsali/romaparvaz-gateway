@@ -1,0 +1,32 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Pricing.Request.FareQuote">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:RetrieveFareQuote>
+         <!--Optional:-->
+         <tem:RetrieveFareQuoteRequest>
+            <rad:SecurityGUID>{{TOKEN}}</rad:SecurityGUID>
+            <rad:CarrierCodes>
+               <!--Zero or more repetitions:-->
+               <rad:CarrierCode>
+                  <rad:AccessibleCarrierCode>OV</rad:AccessibleCarrierCode>
+               </rad:CarrierCode>
+            </rad:CarrierCodes>
+            <!--Optional:-->
+            <rad:ClientIPAddress></rad:ClientIPAddress>
+            <!--Optional:-->
+            <rad:HistoricUserName>{{USERNAME_}}</rad:HistoricUserName>
+            <rad1:CurrencyOfFareQuote>IRR</rad1:CurrencyOfFareQuote>
+            <rad1:PromotionalCode></rad1:PromotionalCode>
+            <rad1:IataNumberOfRequestor>{{TA_NUMBER}}</rad1:IataNumberOfRequestor>
+            <rad1:CorporationID>-2147483648</rad1:CorporationID>
+            <rad1:FareFilterMethod>NoCombinabilityRoundtripLowestFarePerFareType</rad1:FareFilterMethod>
+            <rad1:FareGroupMethod>WebFareTypes</rad1:FareGroupMethod>
+            <rad1:InventoryFilterMethod>Available</rad1:InventoryFilterMethod>
+            <rad1:FareQuoteDetails>
+               <!--Zero or more repetitions:-->
+               {{FareQuoteDetails}}
+            </rad1:FareQuoteDetails>
+         </tem:RetrieveFareQuoteRequest>
+      </tem:RetrieveFareQuote>
+   </soapenv:Body>
+</soapenv:Envelope>

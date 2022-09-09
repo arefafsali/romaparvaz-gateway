@@ -1,0 +1,20 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rad="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request" xmlns:rad1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.TravelAgents.Request">
+                    <soapenv:Header/>
+                    <soapenv:Body>
+                        <tem:LoginTravelAgent>
+                            <tem:LoginTravelAgentRequest>
+                                <rad:SecurityGUID>{{TOKEN}}</rad:SecurityGUID>
+                                <rad:CarrierCodes>
+                                    <rad:CarrierCode>
+                                        <rad:AccessibleCarrierCode>OV</rad:AccessibleCarrierCode>
+                                    </rad:CarrierCode>
+                                </rad:CarrierCodes>
+                                <rad:ClientIPAddress></rad:ClientIPAddress>
+                                <rad:HistoricUserName></rad:HistoricUserName>
+                                <rad1:IATANumber>{{TA_NUMBER}}</rad1:IATANumber>
+                                <rad1:UserName>{{USERNAME_}}</rad1:UserName>
+                                <rad1:Password>{{PASSWORD_}}</rad1:Password>
+                            </tem:LoginTravelAgentRequest>
+                        </tem:LoginTravelAgent>
+                    </soapenv:Body>
+                </soapenv:Envelope>

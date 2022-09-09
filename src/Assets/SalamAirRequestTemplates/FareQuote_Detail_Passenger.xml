@@ -1,0 +1,7 @@
+ 
+         <rad1:FareQuoteRequestInfo>
+            <rad1:PassengerTypeID>{{PassengerTypeID}}</rad1:PassengerTypeID>
+            <rad1:TotalSeatsRequired>{{Passenger_COUNT}}</rad1:TotalSeatsRequired>
+         </rad1:FareQuoteRequestInfo>
+      
+          
